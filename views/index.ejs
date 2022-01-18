@@ -10,7 +10,7 @@
 <body>
 
 
-  <li><a class="dropdown-item" href="#info" class="button">info juurde</a></li>
+  <a class="dropdown-item" href="#info" class="button">info juurde</a>
 
 
   <div class="container">
@@ -20,7 +20,10 @@
           <div class="row-lg-3">
                 <h2>Personal Inforamtion</h2>
           
-                <p>Full name, date of birth, place of residence</p>
+                <% for (let i = 0; i < myDatas.length; i++) {%>
+                  <li><%= myDatas[i].personalinfo %>
+                
+                <%}%>
 
         </form>
 
@@ -29,8 +32,10 @@
             <div class="row-lg-3">
                 <h2>Education</h2>
           
-                <p>Include the full name of the schools you graduated from, include the dates of the graduation
-                </p>
+                <% for (let i = 0; i < myDatas.length; i++) {%>
+                  <li><%= myDatas[i].education %>
+                
+                <%}%>
         
 
             
@@ -45,30 +50,45 @@
             <div class="row-lg-3"> 
                   <h2>Technical skills</h2>
             
-                  <p>Programming
-                    Back-end
-                    Front-end
-                    </p>
+                  <% for (let i = 0; i < myDatas.length; i++) {%>
+                    <li><%= myDatas[i].technical_skills %>
+                  
+                  <%}%>
                 </div>
 
 
               <div class="row-lg-3">
                   <h2>Soft skills</h2>
             
-                <p>Time management
-                  Creative thinking 
-                  Teamwork 
-                  </p> 
+                  <% for (let i = 0; i < myDatas.length; i++) {%>
+                    <li><%= myDatas[i].soft_skills %>
+                  
+                  <%}%>
                 </div>
 
       </div>
-
+      <% for (let i = 0; i < myDatas.length; i++) {%>
+      <div class="pictureDiv">
+        <img src="<%= myDatas[i].imageUrl %>" alt="pilt" class="rounded-circle m-2" width="600" height="400">
+    </div>
+    <%}%>
 
 
             <footer>
               Eduardo Tgm
             </footer>
+
+
+
+
+
+
+            
 </body>
 </html>
+
+
+
+
 
 

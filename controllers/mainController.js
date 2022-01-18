@@ -1,7 +1,25 @@
 const date = require('../getDate.js');
+const { fetchWishes } = require('../models/data');
+const Data = require('../models/data');
 
-exports.getMainPage =(req,res)=>{//req - request , res-response
-    let today = date.getDate();
-    res.render('index', {dateToRender: today});
+exports.getMainPage =  (request, response)=>{
+    Data.fetchDatas(Datas =>{
+        console.log(Datas);
+
+
+
+        let today = date.getDate();
+        response.render('index', {dateToRender: today, myDatas: Datas});
+    })
+
+
 }
 
+exports.postData = (req,res)=>{
+    console.log(req.body.userData);
+    const newData = new Data(req.body.userData,req.file.filename);
+    
+    newData.saveData();
+
+    res.redirect('/');
+}
