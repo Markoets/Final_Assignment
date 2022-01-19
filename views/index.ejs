@@ -20,8 +20,8 @@
           <div class="row-lg-3">
                 <h2>Personal Inforamtion</h2>
           
-                <% for (let i = 0; i < myDatas.length; i++) {%>
-                  <li><%= myDatas[i].personalinfo %>
+               
+                  <li><%= myDatas[myDatas.length-1].personalinfo %>
                 
                
 
@@ -33,7 +33,7 @@
                 <h2>Education</h2>
           
             
-                  <li><%= myDatas[i].education %>
+                  <li><%= myDatas[myDatas.length-1].education %>
                 
 
 
@@ -50,7 +50,7 @@
                   <h2>Technical skills</h2>
             
     
-                    <li><%= myDatas[i].technical_skills %>
+                    <li><%= myDatas[myDatas.length-1].technical_skills %>
                   
         
                 </div>
@@ -59,14 +59,15 @@
               <div class="row-lg-3">
                   <h2>Soft skills</h2>
             
-                  <li><%= myDatas[i].soft_skills %>
-
+                  <li><%= myDatas[myDatas.length-1].soft_skills %>
+                  
                   <div class="pictureDiv">
-                    <img src="<%= myDatas[i].imageUrl %>" alt="pilt" class="rounded-circle m-2" width="600" height="400">
+                    <img src="<%= myDatas[myDatas.length-1].imageUrl %>" alt="pilt" class="rounded-circle m-2" width="600" height="400">
+               
                 </div>
                 
                 </div>
-                <%}%>
+         
       </div>
  
 

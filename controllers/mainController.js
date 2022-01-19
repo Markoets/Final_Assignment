@@ -30,5 +30,7 @@ exports.postData = (req,res)=>{
     
     newData.saveData();
 
-    res.redirect('/admin');
+    res.redirect('/');
 }
+
+
