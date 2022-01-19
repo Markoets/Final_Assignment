@@ -10,7 +10,7 @@
 <body>
 
 
-  <a class="dropdown-item" href="#info" class="button">info juurde</a>
+  <a class="dropdown-item" href="/admin" class="button">Admin  Page</a>
 
 
   <div class="container">
@@ -23,7 +23,7 @@
                 <% for (let i = 0; i < myDatas.length; i++) {%>
                   <li><%= myDatas[i].personalinfo %>
                 
-                <%}%>
+               
 
         </form>
 
@@ -32,11 +32,10 @@
             <div class="row-lg-3">
                 <h2>Education</h2>
           
-                <% for (let i = 0; i < myDatas.length; i++) {%>
+            
                   <li><%= myDatas[i].education %>
                 
-                <%}%>
-        
+
 
             
               
@@ -50,28 +49,26 @@
             <div class="row-lg-3"> 
                   <h2>Technical skills</h2>
             
-                  <% for (let i = 0; i < myDatas.length; i++) {%>
+    
                     <li><%= myDatas[i].technical_skills %>
                   
-                  <%}%>
+        
                 </div>
 
 
               <div class="row-lg-3">
                   <h2>Soft skills</h2>
             
-                  <% for (let i = 0; i < myDatas.length; i++) {%>
-                    <li><%= myDatas[i].soft_skills %>
-                  
-                  <%}%>
-                </div>
+                  <li><%= myDatas[i].soft_skills %>
 
+                  <div class="pictureDiv">
+                    <img src="<%= myDatas[i].imageUrl %>" alt="pilt" class="rounded-circle m-2" width="600" height="400">
+                </div>
+                
+                </div>
+                <%}%>
       </div>
-      <% for (let i = 0; i < myDatas.length; i++) {%>
-      <div class="pictureDiv">
-        <img src="<%= myDatas[i].imageUrl %>" alt="pilt" class="rounded-circle m-2" width="600" height="400">
-    </div>
-    <%}%>
+ 
 
 
             <footer>

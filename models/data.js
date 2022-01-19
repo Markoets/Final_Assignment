@@ -4,7 +4,7 @@ const filePath = path.join(path.dirname(require.main.filename), 'data','data.jso
 
 
 module.exports = class Data {
-    constructor(personalinfo,education,technical_skills,imageUrl){
+    constructor(personalinfo,education,technical_skills,soft_skills,imageUrl){
         this.personalinfo= personalinfo;
         this.education = education;
        this.technical_skills=technical_skills;
@@ -17,10 +17,10 @@ module.exports = class Data {
     saveData(){
         //read file content first
         fs.readFile(filePath,(error ,fileContent)=>{
-            let data = [];
+            let datas = [];
 
             if(!error){
-                data = JSON.parse(fileContent);
+                datas = JSON.parse(fileContent);
             }
             else{
                 console.log(error);
@@ -29,7 +29,7 @@ module.exports = class Data {
             datas.push(this);  //newWish.saveWish();
 
 
-            fs.writeFile(filePath, JSON.stringify(Datas), (error)=>{
+            fs.writeFile(filePath, JSON.stringify(datas), (error)=>{
                 if(!error){
                     console.log('Datas saved!!!');
                 }

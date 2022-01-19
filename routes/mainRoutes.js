@@ -1,11 +1,11 @@
-var express = require('express')
+const express = require('express')
+const multer = require('multer');
+const path = require('path');
+const mainController = require('../controllers/mainController');
 const router = express.Router();
 
-const mainController = require('../controllers/mainController');
 
 
-
-router.get('/', mainController.getMainPage);
 
 
 let upload = multer({
@@ -19,6 +19,13 @@ let upload = multer({
     }) 
  });
 
- router.post ('/', upload.single('userFile'), mainController.postData);
+
+ router.get('/', mainController.getMainPage);
+
+ router.get('/admin', mainController.getAdminPage);
+  
+ router.post ('/admin', upload.single('userFile'), mainController.postData);
+ 
+
 
 module.exports = router;
