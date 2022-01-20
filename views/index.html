@@ -1,0 +1,292 @@
+<html bs-app-theme="dark">
+
+<head>
+    <base href="http://bss.design/" bs-system-element="" bs-hidden="">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Tagoma</title>
+    <link rel="stylesheet" href="https://bootstrapstudio.io/demo//embed//bootstrap/5/freelancer/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="stylesheet" href="https://bootstrapstudio.io/demo//embed/animation/animate.min.css" bs-system-element=""
+        bs-hidden="">
+    <link rel="stylesheet" href="https://bootstrapstudio.io/demo//embed/animation/aos.min.css" bs-system-element=""
+        bs-hidden="">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic">
+    <link rel="stylesheet" bs-hidden="1" bs-system-element="1"
+        href="https://bootstrapstudio.io/demo//embed/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" bs-hidden="1" bs-system-element="1"
+        href="https://bootstrapstudio.io/demo//embed/fonts/font-awesome.min.css">
+    <link rel="stylesheet" bs-hidden="1" bs-system-element="1"
+        href="https://bootstrapstudio.io/demo//embed/fonts/ionicons.min.css">
+    <link rel="stylesheet" bs-hidden="1" bs-system-element="1"
+        href="https://bootstrapstudio.io/demo//embed/fonts/line-awesome.min.css">
+    <link rel="stylesheet" bs-hidden="1" bs-system-element="1"
+        href="https://bootstrapstudio.io/demo//embed/fonts/material-icons.min.css">
+    <link rel="stylesheet" bs-hidden="1" bs-system-element="1"
+        href="https://bootstrapstudio.io/demo//embed/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" bs-hidden="1" bs-system-element="1"
+        href="https://bootstrapstudio.io/demo//embed/fonts/typicons.min.css">
+    <link rel="stylesheet" href="https://bootstrapstudio.io/demo//embed/fonts/fontawesome5-overrides.min.css"
+        bs-system-element="" bs-hidden="">
+    <style bs-system-element="" bs-hidden=""></style>
+    <style bs-system-element="" bs-hidden=""></style>
+</head>
+
+<body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="72">
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-secondary text-uppercase" id="mainNav">
+        <div class="container"><a class="navbar-brand" href="#page-top">Tagoma</a><button data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive"
+                class="navbar-toggler text-white bg-primary navbar-toggler-right text-uppercase rounded"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i
+                    class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-0 mx-lg-1"></li>
+                    <li class="nav-item mx-0 mx-lg-1"></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
+                            href="#contact">Admin</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <header class="text-center text-white bg-primary masthead">
+        <div class="container"><img class="img-fluid d-block mx-auto mb-5"
+                src="<%= myDatas[myDatas.length-1].imageUrl %>">
+            <h1>Tagoma</h1>
+            <h2 class="font-weight-light mb-0">Software engineer</h2>
+        </div>
+    </header>
+    <section class="text-white bg-primary mb-0" id="about">
+        <div class="container">
+            <h2 class="text-uppercase text-center text-white">About</h2>
+            <div class="row">
+                <div class="col-lg-4 ms-auto">
+                    <p class="lead"><%= myDatas[myDatas.length-1].personalinfo %></p>
+                </div>
+                <div class="col-lg-4 me-auto">
+                    <p class="lead"><%= myDatas[myDatas.length-1].education %></p>
+                </div>
+                <div class="col-lg-4 me-auto">
+                    <p class="lead"><%= myDatas[myDatas.length-1].technical_skills %></p>
+                </div>
+                <div class="col-lg-4 me-auto">
+                    <p class="lead"><%= myDatas[myDatas.length-1].soft_skills %></p>
+                </div>
+            </div>
+            <div class="text-center mt-4"></div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container">
+            <h2 class="text-uppercase text-center text-secondary mb-0">Contact Me</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <form id="contactForm" name="sentMessage" novalidate="novalidate">
+                        <div class="control-group">
+                            <div class="mb-0 form-floating controls pb-2"><input type="text" class="form-control"
+                                    id="name" required="" placeholder="Name"><label
+                                    class="form-label">Name</label><small
+                                    class="form-text text-danger help-block"></small></div>
+                        </div>
+                        <div class="control-group">
+                            <div class="mb-0 form-floating controls pb-2"><input type="email" class="form-control"
+                                    id="email" required="" placeholder="Email Address"><label class="form-label">Email
+                                    Address</label><small class="form-text text-danger help-block"></small></div>
+                        </div>
+                        <div class="control-group">
+                            <div class="mb-0 form-floating controls pb-2"><input type="tel" class="form-control"
+                                    id="phone" required="" placeholder="Phone Number"><label class="form-label">Phone
+                                    Number</label><small class="form-text text-danger help-block"></small></div>
+                        </div>
+                        <div class="control-group">
+                            <div class="mb-5 form-floating controls pb-2"><textarea class="form-control" id="message"
+                                    required="" placeholder="Message" style="height: 150px;"></textarea><label
+                                    class="form-label">Message</label><small
+                                    class="form-text text-danger help-block"></small></div>
+                        </div>
+                        <div id="success"></div>
+                        <div><button class="btn btn-primary btn-xl" id="sendMessageButton" type="submit">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="text-center footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-5 mb-lg-0" style="width: 660px;">
+                    <h4 class="text-uppercase mb-4">Location</h4>
+                    <p>Tallinn</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="text-center text-white copyright py-4">
+        <div class="container"><small>Copyright ©&nbsp;Tagoma 2022</small></div>
+    </div>
+    <div class="d-lg-none scroll-to-top position-fixed rounded"><a class="text-center d-block rounded text-white"
+            href="#page-top"><i class="fa fa-chevron-up"></i></a></div>
+    <div role="dialog" tabindex="-1" class="modal text-center" id="portfolio-modal-1">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header"><button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body">
+                    <div class="container text-center">
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto">
+                                <h2 class="text-uppercase text-secondary mb-0">Project Name</h2>
+                                <hr class="star-dark mb-5"><img class="img-fluid mb-5"
+                                    src="blob:https://bootstrapstudio.io/a8d9283b-1eba-47cc-8ef3-10421ca45b0f">
+                                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque
+                                    assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam
+                                    velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer pb-5"><a
+                        class="btn btn-primary btn-lg mx-auto rounded-pill portfolio-modal-dismiss" role="button"
+                        data-bs-dismiss="modal"><i class="fa fa-close"></i>&nbsp;Close Project</a></div>
+            </div>
+        </div>
+    </div>
+    <div role="dialog" tabindex="-1" class="modal text-center" id="portfolio-modal-2">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header"><button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body">
+                    <div class="container text-center">
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto">
+                                <h2 class="text-uppercase text-secondary mb-0">Project Name</h2>
+                                <hr class="star-dark mb-5"><img class="img-fluid mb-5"
+                                    src="blob:https://bootstrapstudio.io/58c69150-e438-46ad-b1cb-a97e696bab36">
+                                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque
+                                    assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam
+                                    velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer pb-5"><a
+                        class="btn btn-primary btn-lg mx-auto rounded-pill portfolio-modal-dismiss" role="button"
+                        data-bs-dismiss="modal"><i class="fa fa-close"></i>&nbsp;Close Project</a></div>
+            </div>
+        </div>
+    </div>
+    <div role="dialog" tabindex="-1" class="modal text-center" id="portfolio-modal-3">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header"><button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body">
+                    <div class="container text-center">
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto">
+                                <h2 class="text-uppercase text-secondary mb-0">Project Name</h2>
+                                <hr class="star-dark mb-5"><img class="img-fluid mb-5"
+                                    src="blob:https://bootstrapstudio.io/1c66a3e8-7b05-499f-b682-4dfbbc28364e">
+                                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque
+                                    assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam
+                                    velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer pb-5"><a
+                        class="btn btn-primary btn-lg mx-auto rounded-pill portfolio-modal-dismiss" role="button"
+                        data-bs-dismiss="modal"><i class="fa fa-close"></i>&nbsp;Close Project</a></div>
+            </div>
+        </div>
+    </div>
+    <div role="dialog" tabindex="-1" class="modal text-center" id="portfolio-modal-4">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header"><button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body">
+                    <div class="container text-center">
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto">
+                                <h2 class="text-uppercase text-secondary mb-0">Project Name</h2>
+                                <hr class="star-dark mb-5"><img class="img-fluid mb-5"
+                                    src="blob:https://bootstrapstudio.io/ef13d52b-1410-4dc6-b2e4-60cd097017bb">
+                                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque
+                                    assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam
+                                    velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer pb-5"><a
+                        class="btn btn-primary btn-lg mx-auto rounded-pill portfolio-modal-dismiss" role="button"
+                        data-bs-dismiss="modal"><i class="fa fa-close"></i>&nbsp;Close Project</a></div>
+            </div>
+        </div>
+    </div>
+    <div role="dialog" tabindex="-1" class="modal text-center" id="portfolio-modal-5">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header"><button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body">
+                    <div class="container text-center">
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto">
+                                <h2 class="text-uppercase text-secondary mb-0">Project Name</h2>
+                                <hr class="star-dark mb-5"><img class="img-fluid mb-5"
+                                    src="blob:https://bootstrapstudio.io/ca0f0068-97bb-4792-9665-0c253a371ade">
+                                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque
+                                    assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam
+                                    velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer pb-5"><a
+                        class="btn btn-primary btn-lg mx-auto rounded-pill portfolio-modal-dismiss" role="button"
+                        data-bs-dismiss="modal"><i class="fa fa-close"></i>&nbsp;Close Project</a></div>
+            </div>
+        </div>
+    </div>
+    <div role="dialog" tabindex="-1" class="modal text-center" id="portfolio-modal-6">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header"><button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body">
+                    <div class="container text-center">
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto">
+                                <h2 class="text-uppercase text-secondary mb-0">Project Name</h2>
+                                <hr class="star-dark mb-5"><img class="img-fluid mb-5"
+                                    src="blob:https://bootstrapstudio.io/bb21a123-6ae4-48f2-a794-d349bc045ce8">
+                                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque
+                                    assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam
+                                    velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer pb-5"><a
+                        class="btn btn-primary btn-lg mx-auto rounded-pill portfolio-modal-dismiss" role="button"
+                        data-bs-dismiss="modal"><i class="fa fa-close"></i>&nbsp;Close Project</a></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
