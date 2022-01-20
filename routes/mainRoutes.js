@@ -25,6 +25,15 @@ let upload = multer({
  router.get('/admin', mainController.getAdminPage);
   
  router.post ('/admin', upload.single('userFile'), mainController.postData);
+
+ router.get('/register',mainController.getRegisterPage);
+ router.post('/register',mainController.postRegister);
+ router.get('/login',mainController.getLoginPage);
+ router.post('/login',mainController.postLogin);
+
+ 
+ 
+ router.get('/logout',mainController.userLogout);
  
 
 
