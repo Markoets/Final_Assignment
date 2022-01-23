@@ -1,21 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
+<html bs-app-theme="dark">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Admin page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Home - Tagoma</title>
+  <link rel="stylesheet" href="https://bootstrapstudio.io/demo//embed//bootstrap/5/freelancer/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+
+  <style bs-system-element="" bs-hidden=""></style>
+  <style bs-system-element="" bs-hidden=""></style>
 </head>
-<body>
-  
-    <form action="admin" method="POST" enctype="multipart/form-data">
-        <input type="text" name="personalinfo" placeholder="add personal info">
-        <input type="text" name="education" placeholder="add education">
-        <input type="text" name="technical_skills" placeholder="add technical skills">
-        <input type="text" name="soft_skills" placeholder="add soft skills">
-        <input type="file" name="userFile" class="add a pic">
-        <button type="submit" class="button">Add Data</button>
-    </form>
+
+
+    <section id="contact">
+        <div class="container">
+          <h2 class="text-uppercase text-center text-secondary mb-0">Admin</h2>
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <form action="admin" method="POST" enctype="multipart/form-data">
+                <div class="control-group">
+                  <div class="mb-0 form-floating controls pb-2"><input type="text" name="personalinfo" placeholder="add personal info">
+                </div>
+   
+                <div class="control-group">
+                  <div class="mb-0 form-floating controls pb-2"> <input type="text" name="education" placeholder="add education"></div>
+                </div>
+
+                <div class="control-group">
+                    <div class="mb-0 form-floating controls pb-2">         <input type="text" name="technical_skills" placeholder="add technical skills"></div>
+                  </div>
+                  <div class="control-group">
+                    <div class="mb-0 form-floating controls pb-2">                <input type="text" name="soft_skills" placeholder="add soft skills"></div>
+                  </div>
+                  <div class="control-group">
+                    <div class="mb-0 form-floating controls pb-2">                      <input type="file" name="userFile" class="add a pic"></div>
+                  </div>
+                <div id="success"></div>
+                <div><button class="button btn btn-primary btn-xl"  type="submit">Send</button>
+                </div>
+
+                
+</form>
 
 
     <a href="/logout">Log out</a>
