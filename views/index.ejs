@@ -15,15 +15,11 @@
 
 <body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="72">
   <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-secondary text-uppercase" id="mainNav">
-    <div class="container"><a class="navbar-brand" href="#page-top">Tagoma</a><button data-bs-toggle="collapse"
-        data-bs-target="#navbarResponsive"
-        class="navbar-toggler text-white bg-primary navbar-toggler-right text-uppercase rounded"
-        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i
-          class="fa fa-bars"></i></button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="/admin">Admin</a></li>
-        </ul>
+    
+    <div class="container"><a class="navbar-brand" href="#page-top">Tagoma</a>
+      <div class=" "><a class="navbar-brand" href="/admin">Admin</a>
+
+
       </div>
     </div>
   </nav>
@@ -33,83 +29,73 @@
   <header class="text-center text-white bg-primary masthead">
     <div class="container"><img class="img-fluid d-block mx-auto mb-5" src="<%= myDatas[myDatas.length-1].imageUrl %>">
       <h1>Tagoma</h1>
-      <h2 class="font-weight-light mb-0">Software engineer</h2>
+      <h2 class="font-weight-light mb-0">Software developer</h2>
     </div>
   </header>
 
 
 
 
-  <section id="personalinfo">
-    <div class="tech-container mx-auto">
-      <h2 class="text-uppercase text-center text-secondary mb-0 bg-primary">Personal Info</h2>
-
-
-      <div class="text-uppercase text-center text-secondary mb-0 h3 bg-primary">
-        <p class="lead"><%= myDatas[myDatas.length-1].personalinfo %>
-      </div>
-
-    </div>
-    </div>
-  </section>
 
 
 
 
 
-  <section id="education">
-    <div class="tech-container mx-auto">
-      <h2 class="text-uppercase text-center text-secondary mb-0 bg-primary">Education</h2>
 
-
-      <div class="text-uppercase text-center text-secondary mb-0 h3 bg-primary">
-        <p class="lead"><%= myDatas[myDatas.length-1].education %>
-      </div>
+ 
 
 
 
 
-    </div>
-    </div>
-  </section>
-
-
-
-  <section id="technical_skills">
-    <div class="tech-container mx-auto">
-      <h2 class="text-uppercase text-center text-secondary mb-0 bg-primary">Technical skills </h2>
-
-
-      <div class="text-uppercase text-center text-secondary mb-0 h3 bg-primary">
-        <p class="lead"><%= myDatas[myDatas.length-1].technical_skills %>
+  <div class="container" style="width: 960px;max-width: 800px;">
+    <h2 class="text-uppercase text-center text-white">About</h2>
+    <hr class="star-light mb-5">
+    <h2 class="text-uppercase text-center text-white">My personal info</h2>
+    <div class="row">
+      <div class="col-lg-11" style="width: 800px;">
+        <p class="lead text-center" style="width: 800px;"><%= myDatas[myDatas.length-1].personalinfo %> <br>
       </div>
     </div>
-    </div>
-  </section>
+  </div>
 
+  <div class="container" style="width: 960px;max-width: 800px;">
 
-
-  <section id="soft_skills">
-    <div class="tech-container mx-auto bg-primary">
-      <h2 class="text-uppercase text-center text-secondary mb-0 bg-primary">Soft skills</h2>
-
-
-      <div class="text-uppercase text-center text-secondary mb-0 h3">
-        <p class="lead"><%= myDatas[myDatas.length-1].soft_skills %>
+    <hr class="star-light mb-5">
+    <h2 class="text-uppercase text-center text-white">My Education</h2>
+    <div class="row">
+      <div class="col-lg-11" style="width: 800px;">
+        <p class="lead text-center" style="width: 800px;"><%= myDatas[myDatas.length-1].education %> <br>
       </div>
-
-
-
-
     </div>
-    </div>
-  </section>
+  </div>
 
+  <div class="container" style="width: 960px;max-width: 800px;">
+
+    <hr class="star-light mb-5">
+    <h2 class="text-uppercase text-center text-white">My technical skills</h2>
+    <div class="row">
+      <div class="col-lg-11" style="width: 800px;">
+        <p class="lead text-center" style="width: 800px;"><%= myDatas[myDatas.length-1].technical_skills %> <br>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" style="width: 960px;max-width: 800px;">
+
+    <hr class="star-light mb-5">
+    <h2 class="text-uppercase text-center text-white">My soft skills</h2>
+    <div class="row">
+      <div class="col-lg-11" style="width: 800px;">
+        <p class="lead text-center" style="width: 800px;"><%= myDatas[myDatas.length-1].soft_skills %> <br>
+      </div>
+    </div>
+  </div>
 
 
   <section id="contact">
     <div class="container">
       <h2 class="text-uppercase text-center text-secondary mb-0">Contact Me</h2>
+      <hr class="star-dark mb-5">
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <form id="contactForm" name="sentMessage" novalidate="novalidate">
@@ -120,13 +106,13 @@
             </div>
             <div class="control-group">
               <div class="mb-0 form-floating controls pb-2"><input type="email" class="form-control" id="email"
-                  required="" placeholder="Email Address"><label class="form-label">Email
-                  Address</label><small class="form-text text-danger help-block"></small></div>
+                  required="" placeholder="Email Address"><label class="form-label">Email Address</label><small
+                  class="form-text text-danger help-block"></small></div>
             </div>
             <div class="control-group">
               <div class="mb-0 form-floating controls pb-2"><input type="tel" class="form-control" id="phone"
-                  required="" placeholder="Phone Number"><label class="form-label">Phone
-                  Number</label><small class="form-text text-danger help-block"></small></div>
+                  required="" placeholder="Phone Number"><label class="form-label">Phone Number</label><small
+                  class="form-text text-danger help-block"></small></div>
             </div>
             <div class="control-group">
               <div class="mb-5 form-floating controls pb-2"><textarea class="form-control" id="message" required=""
@@ -134,8 +120,7 @@
                   class="form-label">Message</label><small class="form-text text-danger help-block"></small></div>
             </div>
             <div id="success"></div>
-            <div><button class="btn btn-primary btn-xl" id="sendMessageButton" type="submit">Send</button>
-            </div>
+            <div><button class="btn btn-primary btn-xl" id="sendMessageButton" type="submit">Send</button></div>
           </form>
         </div>
       </div>
